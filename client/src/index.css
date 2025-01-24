@@ -1,0 +1,13 @@
+
+:root {
+  --my-beige: #ebddc9;
+}
+
+body {
+  background-image: url("/public/images/floral.png");
+}
+
+h1, p {
+  background-color: var(--my-beige);
+  padding: 5px;
+}
