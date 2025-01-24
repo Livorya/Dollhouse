@@ -1,13 +1,111 @@
 
 :root {
-  --my-beige: #ebddc9;
+  --item-card: rgba(211, 201, 182, 0.8);
+  --item-banner: #e4d9bf;
+  --gray-border: #9d998f;
+  --nr-box: #ededed;
+  --button: #dfdfdf;
+  --buy-hover: #c1e1c1;
+  --undo-hover: #e1c1c1;
+}
+
+* {
+  margin: 0;
 }
 
 body {
   background-image: url("/public/images/floral.png");
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h1, p {
-  background-color: var(--my-beige);
-  padding: 5px;
+.nr {
+  font-family: Verdana, sans-serif;
 }
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product {
+  margin: 10px;
+  width: 200px;
+  background-color: var(--item-card);
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+
+  p {
+    padding-bottom: 2px;
+  }
+
+  .title {
+    padding: 5px 0;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    background-color: var(--item-banner);
+    border: 2px solid var(--gray-border);
+  }
+
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+
+    img {
+      width: 200px;
+      position: absolute;
+    }
+
+    .behind-wall {
+      filter: blur(2px);
+    }
+  }
+
+  .buy-nav {
+    align-self: normal;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    background-color: var(--item-banner);
+    border-top: 2px solid var(--gray-border);
+
+    p {
+      width: 40px;
+      border-radius: 5px;
+      padding: 5px 0;
+      color: gray;
+      border: 2px solid var(--gray-border);
+      background-color: var(--nr-box);
+    }
+
+    button {
+      width: 60px;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 5px 0;
+      background-color: var(--button);
+    }
+
+    .buy:hover {
+      background-color: var(--buy-hover);
+    }
+
+    .undo:hover {
+      background-color: var(--undo-hover);
+    }
+  }
+}
+
