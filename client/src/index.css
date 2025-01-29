@@ -1,12 +1,17 @@
 
 :root {
   --item-card: rgba(211, 201, 182, 0.8);
+  --package-card: rgba(182, 195, 211, 0.8);
   --item-banner: #e4d9bf;
   --gray-border: #9d998f;
   --nr-box: #ededed;
+  --nr-text: #a29a80;
   --button: #dfdfdf;
   --buy-hover: #c1e1c1;
   --undo-hover: #e1c1c1;
+  --pink-pack: rgba(225, 193, 222, 0.8);
+  --color-pack: rgba(197, 209, 239, 0.8);
+  --natur-pack: rgba(208, 225, 193, 0.8);
 }
 
 * {
@@ -14,7 +19,7 @@
 }
 
 body {
-  background-image: url("/public/images/floral.png");
+  background-image: url("/images/floral.png");
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -29,83 +34,231 @@ body {
 }
 
 .product {
-  margin: 10px;
+  margin: 7px;
   width: 200px;
   background-color: var(--item-card);
   border: 2px solid black;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  position: relative;
   overflow: hidden;
   align-items: center;
 
   p {
     padding-bottom: 2px;
   }
+}
 
-  .title {
-    padding: 5px 0;
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    background-color: var(--item-banner);
-    border: 2px solid var(--gray-border);
+.title {
+  padding: 5px 0;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--item-banner);
+  border: 2px solid var(--gray-border);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 150px;
+
+  img {
+    width: 200px;
+    position: absolute;
   }
 
-  .item {
-    position: relative;
+  .behind-wall {
+    filter: blur(2px);
+  }
+}
+
+.buy-nav {
+  align-self: normal;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  background-color: var(--item-banner);
+  border-top: 2px solid var(--gray-border);
+
+  p {
     display: flex;
+    align-items: center;
     justify-content: center;
-    height: 150px;
+    width: 40px;
+    height: 26px;
+    border-radius: 5px;
+    color: var(--nr-text);
+    border: 2px solid var(--gray-border);
+    background-color: var(--nr-box);
+  }
+
+  button {
+    width: 60px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: var(--button);
+  }
+}
+
+.buy:hover {
+  background-color: var(--buy-hover);
+}
+
+.undo:hover {
+  background-color: var(--undo-hover);
+}
+
+/* specific styling for packages */
+#packages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.natural {
+  background-color: var(--natur-pack);
+}
+
+.colorful {
+  background-color: var(--color-pack);
+}
+
+.pink {
+  background-color: var(--pink-pack);
+}
+
+.package {
+  display: flex;
+
+  .product {
+    width: 300px;
+  }
+
+  img {
+    position: absolute;
+    overflow: hidden;
+    width: 70px;
+  }
+}
+
+.package .product .item {
+  height: 250px;
+  top: 11px;
+}
+
+.package .product .item img {
+  position: absolute;
+  width: 300px;
+}
+
+/* position of shown items in package view */
+.show-sofa {
+  padding-top: 205px;
+  padding-left: 175px;
+}
+
+.show-bed {
+  padding-top: 151px;
+  padding-left: 180px;
+}
+
+.show-wardrobe {
+  padding-top: 137px;
+  padding-left: 131px;
+}
+
+.show-vanity {
+  padding-top: 137px;
+  padding-left: 91px;
+}
+
+.show-tub {
+  padding-top: 149px;
+  padding-left: 62px;
+}
+
+.show-table {
+  padding-top: 216px;
+  padding-left: 75px;
+}
+
+.show-lamp {
+  padding-top: 194px;
+  padding-left: 75px;
+}
+
+.show-floor-lamp {
+  padding-top: 203px;
+  padding-left: 127px;
+}
+
+/* when the screen is in full size the packages are shown slightly larger */
+@media (min-width: 1100px) {
+  .package {
+    .product {
+      width: 450px;
+    }
 
     img {
-      width: 200px;
-      position: absolute;
-    }
-
-    .behind-wall {
-      filter: blur(2px);
+      width: 90px;
     }
   }
 
-  .buy-nav {
-    align-self: normal;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    background-color: var(--item-banner);
-    border-top: 2px solid var(--gray-border);
+  .package .product .item {
+    height: 320px;
+  }
 
-    p {
-      width: 40px;
-      border-radius: 5px;
-      padding: 5px 0;
-      color: gray;
-      border: 2px solid var(--gray-border);
-      background-color: var(--nr-box);
-    }
+  .package .product .item img {
+    width: 400px;
+  }
+  
+  /* position of shown items in package view */
+  .show-sofa {
+    padding-top: 256px;
+    padding-left: 250px;
+  }
 
-    button {
-      width: 60px;
-      border: 2px solid black;
-      border-radius: 5px;
-      padding: 5px 0;
-      background-color: var(--button);
-    }
+  .show-bed {
+    padding-top: 184px;
+    padding-left: 265px;
+  }
 
-    .buy:hover {
-      background-color: var(--buy-hover);
-    }
+  .show-wardrobe {
+    padding-top: 166px;
+    padding-left: 195px;
+  }
 
-    .undo:hover {
-      background-color: var(--undo-hover);
-    }
+  .show-vanity {
+    padding-top: 166px;
+    padding-left: 143px;
+  }
+
+  .show-tub {
+    padding-top: 181px;
+    padding-left: 105px;
+  }
+
+  .show-table {
+    padding-top: 270px;
+    padding-left: 122px;
+  }
+
+  .show-lamp {
+    padding-top: 240px;
+    padding-left: 122px;
+  }
+
+  .show-floor-lamp {
+    padding-top: 254px;
+    padding-left: 190px;
   }
 }
 

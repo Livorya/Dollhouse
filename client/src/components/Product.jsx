@@ -2,13 +2,8 @@
 export default function Product({ product }) {
   const { name, image, type, collection, price } = product;
 
-  const isWall = (
-    type == "bedWall" ||
-    type == "livingWall" ||
-    type == "diningWall" ||
-    type == "bathWall"
-  );
-
+  const isWall = type.includes("Wall");
+  
   return <div className="product">
     <p className="title">{name}</p>
     <div className="item">
