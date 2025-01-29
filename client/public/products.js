@@ -191,28 +191,28 @@ let products = [
   {
     name: 'Colorful Bedroom Wallpaper',
     image: 'images/wallpapers/colorful bed wall.png',
-    type: 'bedWall',
+    type: 'wall',
     collection: 'colorful',
     price: 65
   },
   {
     name: 'Colorful Dining room Wallpaper',
     image: 'images/wallpapers/colorful dining wall.png',
-    type: 'diningWall',
+    type: 'wall',
     collection: 'colorful',
     price: 40
   },
   {
     name: 'Colorful Living room Wallpaper',
     image: 'images/wallpapers/colorful living wall.png',
-    type: 'livingWall',
+    type: 'wall',
     collection: 'colorful',
     price: 60
   },
   {
     name: 'Colorful Bathroom Wallpaper',
     image: 'images/wallpapers/colorful bath wall.png',
-    type: 'bathWall',
+    type: 'wall',
     collection: 'colorful',
     price: 35
   },
@@ -220,28 +220,28 @@ let products = [
   {
     name: 'Natural Bedroom Wallpaper',
     image: 'images/wallpapers/natural bed wall.png',
-    type: 'bedWall',
+    type: 'wall',
     collection: 'natural',
     price: 35
   },
   {
     name: 'Natural Dining room Wallpaper',
     image: 'images/wallpapers/natural dining wall.png',
-    type: 'diningWall',
+    type: 'wall',
     collection: 'natural',
     price: 25
   },
   {
     name: 'Natural Living room Wallpaper',
     image: 'images/wallpapers/natural living wall.png',
-    type: 'livingWall',
+    type: 'wall',
     collection: 'natural',
     price: 30
   },
   {
     name: 'Natural Bathroom Wallpaper',
     image: 'images/wallpapers/natural bath wall.png',
-    type: 'bathWall',
+    type: 'wall',
     collection: 'natural',
     price: 20
   },
@@ -249,28 +249,28 @@ let products = [
   {
     name: 'Pink Bedroom Wallpaper',
     image: 'images/wallpapers/pink bed wall.png',
-    type: 'bedWall',
+    type: 'wall',
     collection: 'pink',
     price: 50
   },
   {
     name: 'Pink Dining room Wallpaper',
     image: 'images/wallpapers/pink dining wall.png',
-    type: 'diningWall',
+    type: 'wall',
     collection: 'pink',
     price: 30
   },
   {
     name: 'Pink Living room Wallpaper',
     image: 'images/wallpapers/pink living wall.png',
-    type: 'livingWall',
+    type: 'wall',
     collection: 'pink',
     price: 45
   },
   {
     name: 'Pink Bathroom Wallpaper',
     image: 'images/wallpapers/pink bath wall.png',
-    type: 'bathWall',
+    type: 'wall',
     collection: 'pink',
     price: 25
   }

@@ -17,13 +17,13 @@ export default function Package({ title, collection }) {
 
   useEffect(() => {
     setPackageFurnitures(products.filter(product =>
-      product.collection == collection && !product.type.includes("Wall")));
+      product.collection == collection && product.type != "wall"));
   }, []);
 
   const [packageHouseAndWalls, setPackageHouseAndWalls] = useState([]);
 
   useEffect(() => {
-    setPackageHouseAndWalls(products.filter(product => product.collection == collection && product.type.includes("Wall") || product.collection == "all"));
+    setPackageHouseAndWalls(products.filter(product => product.collection == collection && product.type == "wall" || product.type == "house"));
   }, [] );
 
   return <div className="package">
