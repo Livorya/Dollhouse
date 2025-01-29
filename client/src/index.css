@@ -4,6 +4,11 @@
   --package-card: rgba(182, 195, 211, 0.8);
   --item-banner: #e4d9bf;
   --gray-border: #9d998f;
+  --nav-link: rgba(173, 156, 117, 0.6);
+  --nav-link-hover: rgba(240, 212, 146, 0.6);
+  --nav-link-text: #474030;
+  --nav-link-text-hover: #704343;
+  --nav-link-text-active: #e6e0cc;
   --nr-box: #ededed;
   --nr-text: #a29a80;
   --button: #dfdfdf;
@@ -21,6 +26,42 @@
 body {
   background-image: url("/images/floral.png");
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--item-card);
+  border-bottom: 2px solid var(--gray-border);
+  
+  a {
+    text-decoration: none;
+    background-color: var(--nav-link);
+    color: var(--nav-link-text);
+    border: 2px var(--gray-border);
+    border-style: none solid;
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+
+  a:hover {
+    background-color: var(--nav-link-hover);
+    color: var(--nav-link-text-hover);
+  }
+
+  .active {
+    color: var(--nav-link-text-active);
+  }
+}
+
+main {
+  text-align: center;
 }
 
 .nr {
@@ -105,6 +146,7 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     background-color: var(--button);
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 }
 

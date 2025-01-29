@@ -5,6 +5,8 @@ export default function Layout() {
     <header>
       <nav>
         <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={"/products"}>Products</NavLink>
+        <NavLink to={"/packages"}>Packages</NavLink>
       </nav>
     </header>
     <main>
